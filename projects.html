@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{{ site.categories }}
+<p>Categories</p>
+
+<div class="posts">
+  {% for cat in site.categories %}
+    {{ cat.title }}
+    {% for post in cat %}
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+    {% endfor %}
+  {% endfor %}
+</div>
