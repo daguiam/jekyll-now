@@ -13,5 +13,22 @@ layout: default
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
+  <div class="date">
+    Categories:
+      {% for cat in page.categories %}
+        {{ cat }}
+      {% endfor %}
+  </div>
+
+  <div class="date">
+    Tags:
+      {% for tag in page.tags %}
+        {{ tag }}
+      {% endfor %}
+  </div>
+
+
+
+
   {% include disqus.html %}
 </article>

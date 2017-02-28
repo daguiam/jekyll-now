@@ -1,15 +1,16 @@
 ---
 layout: page
-title: About
+title: About me
 permalink: /about/
 ---
 
-Some information about you!
 
-### More Information
+I'm Diogo E. Aguiam, an electronics engineer and PhD student in [Plasma Science and Engineering](https://applausephd.wordpress.com/)
 
-A place to include any other types of information that you'd like to include about yourself.
+Usually stationed at [IPFN](https://www.ipfn.tecnico.ulisboa.pt/) in Lisbon, Portugal. Sometimes at [Max-Planck-IPP](https://www.ipp.mpg.de/) in Munich, Germany.
 
-### Contact me
+Currently working in Microwave Reflectometry diagnostics.
+Check out some of my research at [ResearchGate](https://www.researchgate.net/profile/Diogo_Aguiam).
 
-[email@domain.com](mailto:email@domain.com)
+
+Typical working languages: Python, C, Matlab
