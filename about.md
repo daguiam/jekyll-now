@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 
-I'm Diogo E. Aguiam, an electronics engineer and PhD student in [Plasma Science and Engineering](https://applausephd.wordpress.com/)
+I'm Diogo E. Aguiam, an electronics engineer and PhD student in [Plasma Science and Engineering](https://www.ipfn.tecnico.ulisboa.pt/education/applause)
 
 Usually stationed at [IPFN](https://www.ipfn.tecnico.ulisboa.pt/) in Lisbon, Portugal. Sometimes at [Max-Planck-IPP](https://www.ipp.mpg.de/) in Munich, Germany.
 

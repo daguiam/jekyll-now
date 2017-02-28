@@ -40,6 +40,9 @@ disqus:
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: UA-11322427-2
 
+# mathjax
+mathjax: true
+
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
 url: https://daguiam.github.io
@@ -63,11 +66,24 @@ version: v1.2.0
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
+  hard_wrap: true
+
   # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
+    default_lang: python
+    span:
+      disable: true
+
+  syntax-highlighting:
+    enabled : true
+    css: syntax.css
+
+    #block:
+    #  line_numbers: true
+    #  start_line: 1
 
 # Set the Sass partials directory, as we're using @imports
 sass:
