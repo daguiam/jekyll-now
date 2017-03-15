@@ -20,6 +20,14 @@ tags: url dump
 
 <http://matplotlib.org/examples/pylab_examples/index.html>
 
+<http://matplotlib.org/examples/pylab_examples/subplots_demo.html>
+
+
+### Testing
+
+<http://docs.python-guide.org/en/latest/writing/tests/>
+
+<https://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137>
 
 # Plasma Fusion Research
 
