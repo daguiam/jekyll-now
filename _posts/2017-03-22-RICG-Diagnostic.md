@@ -71,19 +71,23 @@ The main working directories are:
 ### Diagnostic operation directory
 
 Directory path is:
+
 ``` ~/software/diag ```
 
 Commands to execute diagnostic:
 
 ```./loop_diag.sh```
+
 Runs the diagnostic acquisition in loop by waiting for the TS06 trigger.
 
 ```./run_test.sh```
+
 Runs a single small acquisition with software trigger and plots the
 acquired raw data from all the channels in order to check that everything is alright.
 You can usually see the back-wall reflection and spurious signals from each antenna.
 
 ```python check_rawfiles.py```
+
 Checks that the rawfiles inside the [rawfile directory](#local-rawfile-directory) are
 valid (shotnumber>32734) and that they are in the stored in the correct AFS path.
 If the script confirms everything is alright, it is ok to assume that you can delete
@@ -93,7 +97,9 @@ Otherwise you have to check that the correct files are stored in AFS.
 
 
 ### Local rawfile directory
+
 ```~/raw_data_dump/```
+
 has the temporary local cache of rawfiles that are transferred to AFS.
 You should check that the rawfiles are already stored in AFS by running ```python check_rawfiles.py#####``` from [**Diag** directory](#diagnostic-operation-directory)
 
