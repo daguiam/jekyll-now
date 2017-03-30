@@ -22,6 +22,7 @@ tags: url dump
 
 <http://matplotlib.org/examples/pylab_examples/subplots_demo.html>
 
+<http://matplotlib.org/users/recipes.html>
 
 ### Testing
 
