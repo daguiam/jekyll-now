@@ -26,22 +26,30 @@ Assuming that diagnostic is completetly turned off (Diagnostic PC, Acquisiton Sy
 ssh to any solaris computer on user ```ricg```.
 For example:
 
-```ssh ricg@sxaug35.aug.ipp.mpg.de```
+```
+ssh ricg@sxaug35.aug.ipp.mpg.de
+```
 
 
 Turn on  the Diagnostic PC + Acquisition System.
 From home directory:
 
-```bin/powerricg on```
+```
+bin/powerricg on
+```
 
 Turn on Microwave Reflectometer
 
-```bin/powerreflectometer on```
+```
+bin/powerreflectometer on
+```
 
 
 Wait a few seconds then ssh into the ricg diagnostic computer (lnxricg):
 
-```ssh ricg@lnxricg.aug.ipp.mpg.de```
+```
+ssh ricg@lnxricg.aug.ipp.mpg.de
+```
 
 Start the VNC server on the ricg computer.
 Due to a bug it is never properly shutdown or properly started at start up so you need
@@ -49,14 +57,14 @@ to do this everytime the computer shuts down:
 
 ```
 vncserver -kill :3
-
 vncserver :3
-
 ```
 
 Exit both ssh and open a VNC viewer into ```lnxricg:3```
 
-```vncviewer lnxricg.aug.ipp.mpg.de:3```
+```
+vncviewer lnxricg.aug.ipp.mpg.de:3
+```
 
 Insert password
 
@@ -72,21 +80,53 @@ The main working directories are:
 
 Directory path is:
 
-``` ~/software/diag ```
+```
+~/software/diag
+```
 
 Commands to execute diagnostic:
 
-```./loop_diag.sh```
+```
+./loop_diag.sh
+```
 
 Runs the diagnostic acquisition in loop by waiting for the TS06 trigger.
 
-```./run_test.sh```
+```
+./run_test.sh
+```
 
 Runs a single small acquisition with software trigger and plots the
 acquired raw data from all the channels in order to check that everything is alright.
 You can usually see the back-wall reflection and spurious signals from each antenna.
 
-```python check_rawfiles.py```
+```
+python check_rawfiles.py
+```
+
+Output:
+
+```
+ricg@lnxricg:~/software/diag> python check_rawfiles.py
+Found 942 AFS rawfiles.
+Found 1 erroneous AFS rawfiles.
+
+Found 2 local raw data dumps.
+Found 1 erroneous local raw data dumps.
+There are 1 erroneous AFS files.	Please check:
+ Error rawfiles:
+		 33796
+
+
+There are no shots missing in the AFS			OK!
+There are 1 local raw error shots.			Warning!!
+ Error shots:
+		 3255
+
+
+Disk usage of raw data is 125 GB (70%) of 178 GB.
+ricg@lnxricg:~/software/diag>
+```
 
 Checks that the rawfiles inside the [rawfile directory](#local-rawfile-directory) are
 valid (shotnumber>32734) and that they are in the stored in the correct AFS path.
@@ -104,6 +144,28 @@ has the temporary local cache of rawfiles that are transferred to AFS.
 You should check that the rawfiles are already stored in AFS by running ```python check_rawfiles.py#####``` from [**Diag** directory](#diagnostic-operation-directory)
 
 
+
+### Protecting reflectometer hardware
+
+The Microwave Reflectometer hardware is usually robust for most operational conditions.
+It has 105 GHz filters at the front ends to protect against ECRH but it may still be
+damaged by the runaway electrons.
+To protect the reflectometer microwave hardware, **it is usually sufficient to turn
+the microwaves off**.
+It should not be necessary to take disconnect the waveguides (as there are no shutters).
+
+Typical dangerous situations that require shutting down of microwaves:
+
+- Runaway electron operations
+
+- ??
+
+To protect the reflectometer hardware, shut it down:
+
+```
+ssh ricg@sxaug35.aug.ipp.mpg.de
+~/bin/powerreflectometer off
+```
 
 
 

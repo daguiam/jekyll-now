@@ -1,10 +1,11 @@
 ---
-layout: post
-title: Interesting URL dump
+layout: page
 categories: data programming
+permalink: /bookmarks/
 tags: url dump
 ---
 
+# Interesting URL dump
 
 # Programming
 
